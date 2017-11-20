@@ -71,7 +71,7 @@ public class EventEndpoint {
         log.writeLog(this.getClass().getName(),this.getClass(),("getAllEvents was successful - " +
                 "User active was: " + AuthenticationFilter.userEmailByToken),0);
 
-        return Response.status(200).type("text/plain").entity(new Gson().toJson(allEvents)).build();
+        return Response.status(200).type("json/application").entity(new Gson().toJson(allEvents)).build();
 
 
     }
@@ -113,7 +113,7 @@ public class EventEndpoint {
         log.writeLog(this.getClass().getName(),this.getClass(),("getEvent was successful - " +
                 "User active was: " + AuthenticationFilter.userEmailByToken),0);
 
-        return Response.status(200).type("application/json").entity(new Gson().toJson(event)).build();
+        return Response.status(200).type("json/application").entity(new Gson().toJson(event)).build();
 
     }
 
@@ -169,7 +169,7 @@ public class EventEndpoint {
         log.writeLog(this.getClass().getName(),this.getClass(),("createEvent was successful - " +
                 "User active was: " + AuthenticationFilter.userEmailByToken),0);
 
-        return Response.status(201).type("text/plain").entity("Event Created").build();
+        return Response.status(201).type("json/application").entity("Event Created").build();
 
 
     }

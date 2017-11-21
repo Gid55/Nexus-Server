@@ -58,7 +58,7 @@ public class PostEndpoint {
         log.writeLog(this.getClass().getName(),this.getClass(),("getAllPosts was successful - " +
                 "User active was: " + AuthenticationFilter.userEmailByToken),0);
 
-        return Response.status(200).type("application/json").entity(new Gson().toJson(allPosts)).build();
+        return Response.status(200).type("text/plain").entity(new Gson().toJson(allPosts)).build();
     }
 
     /** This method lets the client create a new post
@@ -148,7 +148,7 @@ public class PostEndpoint {
         log.writeLog(this.getClass().getName(),this.getClass(),("createPost was successful - " +
                 "User active was: " + AuthenticationFilter.userEmailByToken),0);
 
-        return Response.status(201).type("text/plain").entity("Post created").build();
+        return Response.status(201).type("json/application").entity("Post created").build();
 
 
     }
@@ -184,7 +184,7 @@ public class PostEndpoint {
         log.writeLog(this.getClass().getName(),this.getClass(),("getPost was successful - " +
                 "User active was: " + AuthenticationFilter.userEmailByToken),0);
 
-        return Response.status(200).type("application/json").entity(new Gson().toJson(post)).build();
+        return Response.status(200).type("text/plain").entity(new Gson().toJson(post)).build();
 
     }
 

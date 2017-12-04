@@ -184,7 +184,7 @@ public class PostEndpoint {
         log.writeLog(this.getClass().getName(),this.getClass(),("getPost was successful - " +
                 "User active was: " + AuthenticationFilter.userEmailByToken),0);
 
-        return Response.status(200).type("text/plain").entity(new Gson().toJson(post)).build();
+        return Response.status(200).type("json/application").entity(new Gson().toJson(post)).build();
 
     }
 

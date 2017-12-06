@@ -37,7 +37,7 @@ import java.util.Properties;
 /**
  * Created by Filip on 10-10-2017.
  */
-
+@Secured
 @Path("/events")
 public class EventEndpoint {
 
